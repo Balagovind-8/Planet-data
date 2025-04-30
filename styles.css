@@ -1,7 +1,7 @@
  /* Light theme (default) */
 body {
     font-family: Arial, sans-serif;
-    background-color: #fafafa;
+    background-color: #f5e0c3; /* Warm light color */
     color: #333;
     padding: 20px;
     line-height: 1.6;
@@ -35,7 +35,7 @@ h1 {
     overflow-x: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #fff5e1; /* Soft warm background color */
 }
 
 table {
@@ -175,23 +175,23 @@ th.dark-mode, td.dark-mode {
 }
 
 tbody.dark-mode tr:nth-child(even) {
-    background-color: #333;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient color for dark rows */
 }
 
 tbody.dark-mode tr:hover {
-    background-color: #444;
+    background: linear-gradient(135deg, #3e4e5e, #455a64); /* Lighter gradient on hover */
 }
 
 /* Dark mode specific rows */
-tbody.dark-mode tr:nth-child(1) { background-color: #333; }
-tbody.dark-mode tr:nth-child(2) { background-color: #444; }
-tbody.dark-mode tr:nth-child(3) { background-color: #555; }
-tbody.dark-mode tr:nth-child(4) { background-color: #666; }
-tbody.dark-mode tr:nth-child(5) { background-color: #777; }
-tbody.dark-mode tr:nth-child(6) { background-color: #888; }
-tbody.dark-mode tr:nth-child(7) { background-color: #999; }
-tbody.dark-mode tr:nth-child(8) { background-color: #aaa; }
-tbody.dark-mode tr:nth-child(9) { background-color: #bbb; }
+tbody.dark-mode tr:nth-child(1) { background: linear-gradient(135deg, #2c3e50, #34495e); }
+tbody.dark-mode tr:nth-child(2) { background: linear-gradient(135deg, #34495e, #3e4e5e); }
+tbody.dark-mode tr:nth-child(3) { background: linear-gradient(135deg, #3e4e5e, #455a64); }
+tbody.dark-mode tr:nth-child(4) { background: linear-gradient(135deg, #455a64, #546e7a); }
+tbody.dark-mode tr:nth-child(5) { background: linear-gradient(135deg, #546e7a, #607d8b); }
+tbody.dark-mode tr:nth-child(6) { background: linear-gradient(135deg, #607d8b, #78909c); }
+tbody.dark-mode tr:nth-child(7) { background: linear-gradient(135deg, #78909c, #90a4ae); }
+tbody.dark-mode tr:nth-child(8) { background: linear-gradient(135deg, #90a4ae, #b0bec5); }
+tbody.dark-mode tr:nth-child(9) { background: linear-gradient(135deg, #b0bec5, #cfd8dc); }
 
 /* Toggle button styling */
 .mode-toggle {
