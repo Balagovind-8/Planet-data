@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solar System Explorer</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>🌌 Solar System Explorer</h1>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
+
+  <p class="source-info">
+    Planetary data from 
+    <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/index.html" target="_blank">
+      NASA Planetary Fact Sheet
+    </a>
+  </p>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Mass (10<sup>24</sup>kg)</th>
+          <th>Diameter (km)</th>
+          <th>Density (kg/m³)</th>
+          <th>Gravity (m/s²)</th>
+          <th>Length of Day (hrs)</th>
+          <th>Distance from Sun (10⁶ km)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example row -->
+        <tr>
+          <td>🪐</td>
+          <td>Earth</td>
+          <td>5.97</td>
+          <td>12,742</td>
+          <td>5514</td>
+          <td>9.8</td>
+          <td>24.0</td>
+          <td>149.6</td>
+        </tr>
+        <!-- Add more planet rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Load theme from localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  </script>
+</body>
+</html>
