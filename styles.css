@@ -92,13 +92,18 @@ td a:hover {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     .container {
-        margin: 0 -20px;
-        border-radius: 0;
+        margin: 0;
+        padding: 10px;
     }
 
     table {
         font-size: 14px;
+        width: 100%;
     }
 
     th, td {
@@ -107,6 +112,32 @@ td a:hover {
 
     h1 {
         font-size: 24px;
+    }
+
+    /* Adjust button position on mobile */
+    .mode-toggle {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+    }
+
+    #toggle-mode {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    /* Make the table horizontally scrollable */
+    .container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px; /* Prevent the table from shrinking too small */
+    }
+
+    th, td {
+        font-size: 12px;
     }
 }
 
@@ -181,4 +212,3 @@ tbody.dark-mode tr:nth-child(9) { background-color: #bbb; }
 #toggle-mode:hover {
     background-color: #2980b9;
 }
- 
